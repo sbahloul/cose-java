@@ -65,7 +65,7 @@ public class RegressionTest extends TestBase {
         CFails = 0;
         File directory = new File(directoryName);
         if (!directory.isDirectory()) {
-            directory = new File("..", directoryName);
+            directory = new File(".", directoryName);
         }
         File[] contents = directory.listFiles();
         assertNotNull(directoryName);
