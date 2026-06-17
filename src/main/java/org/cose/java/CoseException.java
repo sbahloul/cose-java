@@ -5,11 +5,17 @@
  */
 package org.cose.java;
 
+import java.io.Serial;
+
 /**
  *
  * @author jimsch
  */
 public class CoseException extends Exception {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     public CoseException(String message) {
         super(message);
     }

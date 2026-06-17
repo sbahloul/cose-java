@@ -75,7 +75,7 @@ public class OneKey {
             ArrayList<ASN1.TagValue> spki = ASN1.DecodeSubjectPublicKeyInfo(pubKey.getEncoded());
             ArrayList<ASN1.TagValue> alg = spki.get(0).list;
             if (Arrays.equals(alg.get(0).value, ASN1.oid_ecPublicKey)) {
-                byte[] oid = (byte[]) alg.get(1).value;
+                byte[] oid = alg.get(1).value;
                 if (oid == null) throw new CoseException("Invalid SPKI structure");
                 // EC2 Key
                 keyMap.Add(KeyKeys.KeyType.AsCBOR(), KeyKeys.KeyType_EC2);
@@ -232,7 +232,7 @@ public class OneKey {
                 ArrayList<ASN1.TagValue> pkdl = ASN1.DecodePKCS8EC(pkl);
                 if (pkdl.get(0).tag != 4)
                     throw new CoseException("Invalid PKCS8 structure");
-                byte[] keyData = (byte[]) (pkdl.get(0).value);
+                byte[] keyData = pkdl.get(0).value;
                 keyMap.Add(KeyKeys.OKP_D.AsCBOR(), keyData);
             } else {
                 throw new CoseException("Unsupported Algorithm");

@@ -6,11 +6,11 @@
 
     <groupId>org.cose</groupId>
     <artifactId>cose-java</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1</version>
 
-    <name>Fork of COSE-JAVA (com.augustcellars.cose:cose-java)</name>
+    <name>Fork of COSE-JAVA (com.augustcellars.cose:cose-java) to fix dependencies issues</name>
     <description>A Java implementation that supports the COSE secure message specification.</description>
-    <url>https://github.com/cose-wg/cose-java</url>
+    <url>https://github.com/sbahloul/cose-java</url>
     <licenses>
         <license>
             <name>BSD3</name>
@@ -32,9 +32,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/cose-wg/cose-java.git</connection>
-        <developerConnection>scm:git:https://github.com/cose-wg/cose-java.git</developerConnection>
-        <url>https://github.com/cose-wg/cose-java.git</url>
+        <connection>scm:git:https://github.com/sbahloul/cose-java.git</connection>
+        <developerConnection>scm:git:https://github.com/sbahloul/cose-java.git</developerConnection>
+        <url>https://github.com/sbahloul/cose-java.git</url>
     </scm>
 
     <distributionManagement>
@@ -191,44 +191,44 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.2</version>
+            <version>5.14.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.10.2</version>
+            <version>5.14.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk18on</artifactId>
-            <version>1.78.1</version>
+            <version>1.84</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcpkix-jdk18on</artifactId>
-            <version>1.78.1</version>
+            <version>1.84</version>
         </dependency>
         <dependency>
             <groupId>com.upokecenter</groupId>
             <artifactId>cbor</artifactId>
-            <version>4.5.2</version>
+            <version>4.5.6</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.34</version>
+            <version>1.18.46</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.13</version>
+            <version>2.0.18</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.5.6</version>
+            <version>1.5.34</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

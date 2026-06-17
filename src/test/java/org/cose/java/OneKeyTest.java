@@ -175,7 +175,7 @@ public class OneKeyTest extends TestBase {
         
         KeyFactory kFactory = KeyFactory.getInstance("EC", new BouncyCastleProvider());
         X509EncodedKeySpec spec = new X509EncodedKeySpec(rgbSPKI);
-        PublicKey pubKey = (PublicKey) kFactory.generatePublic(spec);
+        PublicKey pubKey = kFactory.generatePublic(spec);
     }
 
     /**
@@ -203,7 +203,7 @@ public class OneKeyTest extends TestBase {
         KeyFactory kFactory = KeyFactory.getInstance("EC", new BouncyCastleProvider());
                 
         PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(rgbPrivate);
-        PrivateKey pubKey = (PrivateKey) kFactory.generatePrivate(spec);
+        PrivateKey pubKey = kFactory.generatePrivate(spec);
     }
 
     @Test
